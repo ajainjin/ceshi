@@ -1,0 +1,224 @@
+.order-process {
+  margin: 0 -15px !important;
+}
+.order-process .col-xs-3 {
+  padding: 0;
+}
+.order-process .col-xs-3 .well {
+  background: url(../images/status2.png) no-repeat center center;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  text-align: left;
+  padding: 0;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 30px;
+  color: #ffffff;
+}
+.order-process .col-xs-3 .well a {
+  color: #ffffff;
+}
+.order-process .col-xs-3 .well a:hover {
+  color: #0088d1;
+}
+.order-process .col-xs-3 .well span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+  line-height: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #c1c1c1;
+  text-align: center;
+}
+.order-process .col-xs-3:nth-child(2).active .well,
+.order-process .col-xs-3:nth-child(3).active .well {
+  background: url(../images/status1.png) no-repeat center center;
+}
+.order-process .col-xs-3:first-child .well {
+  background: url(../images/status1.png) no-repeat center center;
+}
+.order-process .col-xs-3:first-child.active .well {
+  background: url(../images/status1.png) no-repeat center center;
+}
+.order-process .col-xs-3:last-child .well {
+  background: url(../images/status4.png) no-repeat center center;
+}
+.order-process .col-xs-3:last-child.active .well {
+  background: url(../images/status3.png) no-repeat center center;
+}
+.order-process .col-xs-3:first-child .well {
+  padding-left: 20px;
+}
+.order-process .col-xs-3.active .well span {
+  color: #0088d1;
+}
+.aftersail-orderlist {
+  margin: 18px 35px;
+}
+.aftersail-orderlist .mo-list-items thead .text-nowrap th {
+  background-color: transparent;
+  padding-left: 20px;
+}
+.aftersail-orderlist .mo-list-items tbody tr td {
+  padding: 15px;
+}
+.aftersail-orderlist .mo-list-items tbody tr td a {
+  display: inline-block;
+  border: none;
+  width: 150px;
+  text-align: center;
+}
+.aftersail-orderlist .mo-list-items tbody tr td a img {
+  border: none;
+}
+.aftersail-orderlist .mo-list-items tbody tr td a button {
+  border: 1px solid #fc6628;
+  border-radius: 2px;
+  color: #fc6628;
+  background-color: transparent;
+  display: block;
+  margin: 10px auto;
+}
+.aftersale_requestlist_head {
+  padding: 0 40px;
+  margin: 0 -15px;
+  background-color: #f1f1f1;
+}
+.aftersale_requestlist_head table {
+  margin-bottom: 0;
+}
+.aftersale_requestlist_head table thead tr th {
+  height: 60px;
+  line-height: 60px;
+  border: 0px;
+}
+.aftersale_requestlist_body {
+  padding: 0 40px;
+  margin: 0 -15px;
+}
+.aftersale_requestlist_body table tbody tr {
+  background-color: transparent !important;
+}
+.aftersale_requestlist_body table tbody .order-related td:first-child {
+  padding-left: 10px;
+}
+.aftersale_requestlist_body table tbody .order-related td {
+  border-top: 0;
+}
+.aftersale_requestlist_body table tbody .order-item td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+.aftersale_requestlist_body table tbody .order-item td .row .col-xs-4 {
+  padding-left: 0;
+}
+.aftersale_requestlist_body table tbody .order-item .img-thumbnail {
+  border: 0;
+}
+.recycle_requestlist_head {
+  padding: 0 40px;
+  margin: 0 -15px;
+  background-color: #f1f1f1;
+}
+.recycle_requestlist_head table {
+  margin-bottom: 0;
+}
+.recycle_requestlist_head table thead tr th {
+  height: 60px;
+  line-height: 60px;
+  border: 0px;
+  color: #787878;
+}
+.recycle_requestlist_head table thead tr .recycle-product {
+  padding-left: 15px !important;
+}
+.recycle_requestlist_body {
+  padding: 0 40px;
+  margin: 0 -15px;
+}
+.recycle_requestlist_body table tbody tr {
+  background-color: transparent !important;
+}
+.recycle_requestlist_body table tbody .order-related {
+  border-bottom: 1px solid #ccc;
+}
+.recycle_requestlist_body table tbody .order-related td:first-child {
+  padding-left: 10px;
+}
+.recycle_requestlist_body table tbody .order-related td {
+  border-top: 0;
+}
+.recycle_requestlist_body table tbody .order-item td {
+  border-top: 0;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+}
+.recycle_requestlist_body table tbody .order-item td .row .col-xs-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.recycle_requestlist_body table tbody .order-item td .row .col-xs-4 .img-thumbnail {
+  border: 0;
+  max-height: 97px;
+}
+.recycle_requestlist_body table tbody .order-item td .row .col-xs-8 {
+  margin-top: 25px;
+}
+.recycle_requestlist_body table tbody .order-item td .row .col-xs-8 .product-name {
+  font-size: 14px;
+  color: #000;
+}
+.recycle_requestlist_body table tbody .order-item td .row .col-xs-8 .recycle-detail {
+  font-size: 12px;
+  color: #787878;
+}
+.recycle_requestlist_body table tbody .order-item td .text-mtop {
+  margin-top: 25px;
+}
+.recycle_requestlist_body table tbody .order-item td .text-danger {
+  color: #EF7D4B;
+}
+.recycle_requestlist_body table tbody .order-item .handle div a {
+  width: 135px;
+  color: #fff;
+  border: none;
+}
+.recycle_requestlist_body table tbody .order-item .handle div .disabled {
+  background-color: #C9C9C9;
+}
+.recycle_requestlist_body table tbody .order-item .handle div .buy-now {
+  background-color: #EE611A;
+}
+.add_requestlist_head {
+  padding: 0;
+  margin: 0 -15px;
+  background-color: #f1f1f1;
+}
+.add_requestlist_head table {
+  margin-bottom: 0;
+}
+.add_requestlist_head table thead tr th {
+  height: 60px;
+  line-height: 60px;
+  border: 0px;
+  color: #787878;
+}
+.add_requestlist_head table thead tr .recycle-product {
+  padding-left: 15px !important;
+}
+.add_requestlist_body {
+  padding: 0;
+  margin: 0 -15px;
+}
+.add_requestlist_body table tbody tr {
+  background-color: transparent !important;
+}
+.add_requestlist_body table tbody tr td .row .text-center {
+  margin-top: 25px;
+}
+.add_requestlist_body table tbody tr td .goods-name-block {
+  margin-top: 25px;
+}

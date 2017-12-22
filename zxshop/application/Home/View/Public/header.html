@@ -1,0 +1,230 @@
+<script src="__ROOT__/public/js/hm.js"></script><script src="__ROOT__/public/js/compatible.js"></script>
+ <link href="__ROOT__/public/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="__ROOT__/public/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__ROOT__/public/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="__ROOT__/public/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<!--site header common-->
+
+    <link rel="stylesheet" href="__ROOT__/public/css/theme.css">
+    <link rel="stylesheet" href="__ROOT__/public/css/style.css">
+    <link rel="stylesheet" href="__ROOT__/public/css/public.css">
+	<link rel="stylesheet" href="__ROOT__/public/css/shop.css">
+	<link rel="stylesheet" href="__ROOT__/public/css/member.css">
+	<link rel="stylesheet" href="__ROOT__/public/css/aftersales.css">
+     <script src="__ROOT__/public/js/public.js"></script>
+    
+     
+</head>
+
+    <header>
+    <div class="containers">
+        <nav class="navbar navbar-inverse">
+          
+          <ul class="nav navbar-nav top-tools navbar-right right-navbar">
+              
+              <!-- 需要判断是否登录 -->
+              <if condition="!$_SESSION['userMsg']">
+               <li class="is-unlogin"><a href="__APP__/Login/index">登录</a></li>
+              <li class="is-unlogin"><a href="__APP__/Regist/index">注册</a></li>
+              <else/>
+              <li class="is-login">
+                  <a id="member_menu" href="#">欢迎你，<span>{$_SESSION['userMsg']['username']}</span></a>
+                
+              </li>
+              <li><a href="__APP__/Member/index">会员中心</a></li>
+                   <!-- <li><a href="#">我的优惠券</a></li> -->
+                   <li><a href="__APP__/ShopCar/index">我的购物车</a></li>
+				   <li><a href="__APP__/GoodsList/index">我的订单</a></li>
+                   <li><a href="__APP__/Login/loginout">退出登录</a></li>
+			  </if>
+			  <li class="shop-cart no-border">
+				<a href="__APP__/ShopCar/index" class="shopcart-logo">
+					<img src="__ROOT__/public/images/shopcart.png" alt="">&nbsp;购物车
+					<span class="shopcart-number cart-count hidden"></span>
+				</a>
+				<div class="shopcart-null cart-content">
+					<div class="remind">
+						购物车中还没有商品,快快选购吧!
+						<img src="__ROOT__/public/images/smile.png" alt="">
+					</div>
+				</div>
+				
+			 </li>
+          </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="classify-block">
+    <div class="classify">
+	    <div class="logo">
+			<a href="__APP__/Index/index"><img src="__ROOT__/public/images/zx-logo.png" alt=""></a>
+		</div>
+        <ul class="list-unstyled all-goods-type clearfix">
+            <li class="pull-left">
+                <a href="__APP__/Index/index">首页</a>
+            </li>
+           <li class="pull-left crceate-fl"><a href="__APP__/AllGoods/index">所有商品</a></li>
+            
+            
+           <li class="pull-left create-fl" id="cate-qyjp">
+            
+  <a href="__APP__/TPhone/index" id="tj">天机系列</a>
+<div class="fenlei-detail-block">
+  <div class="fenlei-detail">
+    <ul class="list-unstyled fenlei-two clearfix">
+      <li class="pull-left">
+        <a href="#" target="_blank">
+        <div class="goods-img" style="border-left: none;">
+            <img src="__ROOT__/public/images/d3f465b4d2e1.jpg" alt="">
+        </div>
+        <div class="goods-data">
+            <div class="goods-name-block">
+                <span>天机7 MAX</span>
+            </div>
+            <div class="goods-pri-block">
+                 <span class="new-pri">￥<strong>3299.0</strong></span>
+              
+            </div>
+        </div>
+    </a>
+</li>
+<li class="pull-left">
+    <a href="#" target="_blank">
+        <div class="goods-img">
+            <img src="__ROOT__/public/images/f61206bc58f7.jpg" alt="">
+        </div>
+        <div class="goods-data">
+            <div class="goods-name-block">
+                <span>天机7</span>
+            </div>
+            <div class="goods-pri-block">
+                 <span class="new-pri">￥<strong>3099.0</strong></span>
+              
+            </div>
+        </div>
+    </a>
+</li>
+<li class="pull-left">
+    <a href="#" target="_blank">
+        <div class="goods-img">
+            <img src="__ROOT__/public/images/bcbcd1af205e.jpg" alt="">
+        </div>
+        <div class="goods-data">
+            <div class="goods-name-block">
+                <span>天机7 郎朗签名版</span>
+            </div>
+            <div class="goods-pri-block">
+                 <span class="new-pri">￥<strong>4099.0</strong></span>
+              
+            </div>
+        </div>
+    </a>
+</li>
+    </ul>
+  </div>
+</div>
+              
+            </li>
+      
+            
+        
+            
+            <li class="pull-left create-fl" id="cate-jxpj">
+                <a href="__APP__/BSeries/index">BLADE系列</a>
+                <div class="fenlei-detail-block" style="display: none; height: 228px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+                    <div class="fenlei-detail">
+                        <ul class="list-unstyled fenlei-two clearfix">
+                            <li class="pull-left">
+    <a href="#" target="_blank">
+        <div class="goods-img" style="border-left: none;">
+            <img src="__ROOT__/public/images/20bc054eacec.jpg" alt="">
+        </div>
+        <div class="goods-data">
+            <div class="goods-name-block">
+                <span>Blade V8</span>
+            </div>
+            <div class="goods-pri-block">
+                 <span class="new-pri">￥<strong>1499.0</strong></span>
+              
+            </div>
+        </div>
+    </a>
+</li>
+<li class="pull-left">
+    <a href="#" target="_blank">
+        <div class="goods-img">
+            <img src="__ROOT__/public/images/5277f8139b99.jpg" alt="">
+        </div>
+        <div class="goods-data">
+            <div class="goods-name-block">
+                <span>Blade A2 Plus</span>
+            </div>
+            <div class="goods-pri-block">
+                 <span class="new-pri">￥<strong>849.0</strong></span>
+              
+            </div>
+        </div>
+    </a>
+</li>
+<li class="pull-left">
+    <a href="#" target="_blank">
+        <div class="goods-img">
+            <img src="__ROOT__/public/images/76f2dfde13d3.jpg" alt="">
+        </div>
+        <div class="goods-data">
+            <div class="goods-name-block">
+                <span>Blade A2</span>
+            </div>
+            <div class="goods-pri-block">
+                 <span class="new-pri">￥<strong>629.0</strong></span>
+              
+            </div>
+        </div>
+    </a>
+</li>
+<li class="pull-left">
+    <a href="#" target="_blank">
+        <div class="goods-img">
+            <img src="__ROOT__/public/images/c99e4cd1fde3.jpg" alt="">
+        </div>
+        <div class="goods-data">
+            <div class="goods-name-block">
+                <span>Blade A2 高配</span>
+            </div>
+            <div class="goods-pri-block">
+                 <span class="new-pri">￥<strong>779.0</strong></span>
+              
+            </div>
+        </div>
+    </a>
+</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="pull-left crceate-fl"><a href="__APP__/Spro2/index">微投SPRO2</a></li>
+            <li class="pull-left crceate-fl"><a href="__APP__/Comm/index">中兴社区</a></li>
+        </ul>
+        
+		<div class="search">
+			<div class="search-icon">
+			<form action="__APP__/Search/index" method="post" name="search">
+				   <div class="input-block">
+					   <input type="text" id="input_keyword" placeholder="天机7" name="keyword">
+					   
+				   </div>
+				  
+				   <div class="button-block">
+				   
+					   <button type="submit"><img src="__ROOT__/public/images/Search.png" alt="" ></button>
+				   
+				   </div>
+				   </form>
+			</div>
+		</div>
+		 
+    </div>
+</div>
+
+

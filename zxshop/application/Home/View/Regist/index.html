@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>会员注册</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script src="__ROOT__/public/js/hm.js"></script><script src="__ROOT__/public/js/hm.js"></script><script src="__ROOT__/public/js/compatible.js"></script>
+<link href="__ROOT__/public/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="__ROOT__/public/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__ROOT__/public/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="__ROOT__/public/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="__ROOT__/public/css/theme.css">
+<link rel="stylesheet" href="__ROOT__/public/css/public.css">
+<link rel="stylesheet" href="__ROOT__/public/css/shop.css">
+<link rel="stylesheet" href="__ROOT__/public/css/act.css">
+<script src="__ROOT__/public/js/public.js"></script>
+</head>
+<body class="signup-in-body">
+
+<include file="Public:header"/>
+
+
+<div class="container main-container">
+    <div class="passport-signup-container clearfix" style="padding-bottom:0px">
+    <div class="guanggao-block">
+        <img src="__ROOT__/public/images/gg.png" alt="">
+    </div>
+    <div class="panel panel-default signup-panel">
+      <div class="panel-heading clearfix">
+          欢迎注册
+      </div>
+      <div class="panel-body">
+      
+      
+          <form id="member_signup_form" class="form-horizontal" action="__APP__/Regist/check_verify.html" method="post">
+              
+              <div class="form-group">
+                  <div class="col-md-10">
+                    <input type="text" required="true" autocomplete="off" name="login_name" class="form-control" id="input_login_name" placeholder="昵称/手机号/邮箱">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-10">
+                    <input type="password" required="true" name="login_password" class="form-control" id="input_login_password" placeholder="登录密码">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-10">
+                    <input type="password" required="true" name="psw_confirm" class="form-control" id="input_psw_confirm" placeholder="再次输入登录密码">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-10">
+                    <input type="text" required="true" name="vcode" class="form-control" id="input_vcode" placeholder="验证码">
+                    <div class="local-vcode col-md-5" style="margin-right:2px">
+                        <img src="__APP__/Regist/verify" alt="验证码" style="width:90px;height:35px" id="img-verify">
+                    </div>
+                    
+                  </div>
+                 &nbsp;<span style="color:red;font-size:18px" id="span"><b></b></span>
+                  
+                  <button type="button" class="btn btn-link btn-sm vcode-change" onclick="change()">更换验证码</button>
+                  
+                  <!-- 刷新验证码 -->
+                  <script>
+                  function change(){
+                  var img = document.getElementById("img-verify");
+                  img.src = "__APP__/Regist/verify/"+Math.random();
+                  }
+                  </script>
+                  
+                  
+              </div>
+              
+              <div class="form-group reg-btn">
+                  <div class="col-md-10">
+                    <button type="submit"  class="btn btn-warning signup-btn">
+<img src="__ROOT__/public/images/trackingdata" width="0" height="0" border="0">
+立即注册</button>
+
+                  </div>
+              </div>
+              <div class="col-md-12 text-center">
+                已有帐号?&nbsp;&nbsp;&nbsp;
+              <a class="login-now" href="__APP__/Login/index.html">立即登录</a>&nbsp;&nbsp;&nbsp;
+              <a class="is-unlogin" href="__APP__/Login/index.html">不登录了先逛逛再说</a>
+              </div>
+          </form>
+      </div>
+
+    </div>
+
+</div>
+<script>
+$(function(){
+	
+	//var reg="[ `~!@#$%^&*()+=|{}':;',\\[\\].<>》《/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";验证用户名
+	$("#input_login_name").ready(function(){
+		if($(this).val()==""){
+			$("#span").html("用户名不能为空");
+			$(".signup-btn").attr("disabled","disabled");
+		}else if($(this).val().match("[ `~!@#$%^&*()+=|{}':;',\\[\\].<>》《/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]")){            //正则匹配用户名不能为非法字符或空
+			$("#span").html("用户名不合法");
+			$(".signup-btn").attr("disabled","disabled");
+			//window.alert('11111111');	
+		}else if($(this).val().replace(/[\u0391-\uFFE5]/g,"aaa").length>15){
+			$("#span").html("用户名过长");
+			$(".signup-btn").attr("disabled","disabled");
+		}else{
+			
+			$.ajax({
+				type:"get",
+				url:"__APP__/Regist/check",
+				data:"username="+$(this).val(),
+				success:function(msg){
+					$("#span").html(msg);
+				}
+			});
+		
+			
+		}
+		
+		
+	});
+	
+	
+	
+	//验证密码
+	$("#input_login_password").blur(function(){
+		if($(this).val()==""){
+			$("#span").html("密码不能为空");
+			$(".signup-btn").attr("disabled","disabled");
+		}else{
+			$("#span").html("");
+			
+		}
+	});
+	//再次输入密码
+	$("#input_psw_confirm").blur(function(){
+		if($(this).val()==""){
+			$("#span").html("两次密码不一致");
+		}else if($(this).val()!=$("#input_login_password").val()){
+			$("#span").html("两次密码不一致");
+		}else{
+			$("#span").html("");
+			$(".signup-btn").attr("disabled",false);
+		}
+	});
+	
+	
+})
+
+</script> 
+<!-- <script type="text/javascript">
+var flag = false;
+$(function(){  
+	 $('#member_signup_form').submit(function(){  
+	 if(!flag){  
+	 $('.vcode-change').before('<span style="color:red;font-size:18px" id="span"><b></b></span>');  
+	 }  
+	 if($('[name=login-name]').val() == ''){  
+	 flag = true;  
+	 $('#span').html('用户名不能为空');  
+	  
+	 return false;  
+	 }  
+	 
+	 if($('[name=login-password]').val() == ''){  
+	 flag = true;  
+	 $('#span').html('密码不能为空');  
+	  
+	 return false;  
+	 }  
+	 if($('[name=login-password]').val() != $('[name=psw_confirm]').val()){  
+	 flag = true;  
+	 $('#span').html('两次密码不一致');  
+	  
+	 return false;  
+	 }  
+	 return true;  
+	 })  
+	 })  
+
+</script> -->
+
+
+
+</div>
+<include file="Public:footer"/>
+
+</body></html>

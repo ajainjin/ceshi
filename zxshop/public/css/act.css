@@ -1,0 +1,94 @@
+.join-league {
+  background-color: #DFDFDF !important;
+}
+.carousel-control {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 321px;
+  z-index: 5;
+  display: inline-block;
+  background-color: #fff;
+  background-image: none !important;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+.carousel-control-left {
+  left: 60px !important;
+}
+.carousel-control-right {
+  right: 60px !important;
+}
+.carousel-indicators {
+  bottom: -5px !important;
+}
+.w1230 {
+  width: 100%;
+  margin: auto;
+  background-color: #DFDFDF;
+}
+.w1230 .img-block {
+  position: relative;
+}
+.w1230 .img-block img {
+  width: 100%;
+  height: auto;
+}
+.w1230 .img-block .btn {
+  position: absolute;
+  bottom: 30px;
+  left: 465px;
+  width: 300px;
+  height: 50px;
+  line-height: 36px;
+  background-color: #00B3F9;
+  border-color: #00B3F9;
+  box-shadow: none;
+}
+.w1230 .is-promoters {
+  background-color: #fff;
+  height: 74px;
+  line-height: 74px;
+  margin-top: 15px;
+}
+.w1230 .is-promoters p {
+  text-align: center;
+}
+.w1230 .is-promoters p .btn {
+  margin-left: 10px;
+  width: 100px;
+  height: 34px;
+  background-color: #00B3F9;
+  border-color: #00B3F9;
+  box-shadow: none;
+}
+.w1230 .process img {
+  width: 100%;
+}
+.w1230 .become-promoters {
+  margin-top: 15px;
+  text-align: center;
+}
+.w1230 .become-promoters .btn {
+  width: 300px;
+  height: 50px;
+  line-height: 36px;
+  background-color: #00B3F9;
+  border-color: #00B3F9;
+  box-shadow: none;
+}
+.w1230 .join-footer {
+  background-color: #DFDFDF;
+  padding-bottom: 25px;
+}
+.w1230 .join-footer ul {
+  margin: 0 160px;
+}
+.w1230 .join-footer ul li {
+  float: left;
+  padding: 0 40px;
+  margin: 25px 0;
+}
+.w1230 .join-footer .work-time {
+  text-align: center;
+}
